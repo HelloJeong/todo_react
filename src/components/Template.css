@@ -1,0 +1,104 @@
+.container {
+  width: 512px;
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.todo-header {
+  background: #22b8cf;
+  color: white;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-insert {
+  display: flex;
+  height: 3rem;
+  background: #495057;
+}
+
+.todo-input {
+  background: none;
+  outline: none;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: white;
+  flex: 1;
+}
+
+.todo-input::placeholder {
+  color: #dee2e6;
+}
+
+.todo-btn-add {
+  background: #868e96;
+  outline: none;
+  border: 0;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s background ease-in;
+}
+
+.todo-btn-add:hover {
+  background: #adb5bd;
+}
+
+.todo-list {
+  background: white;
+  font-size: 1.6rem;
+  overflow-y: auto;
+}
+
+.todo-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list li {
+  height: 4rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+}
+
+.todo-check {
+  padding-left: 1.4rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.todo-list span {
+  padding-left: 1.4rem;
+  flex: 1;
+}
+
+.todo-list li.checked {
+  color: #22b8cf;
+}
+.todo-list li.checked span {
+  color: #adb5bd;
+  text-decoration: line-through;
+}
+
+.todo-remove {
+  cursor: pointer;
+  color: #ff6b6b;
+  font-size: 2rem;
+  padding-right: 1.4rem;
+}
