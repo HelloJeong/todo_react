@@ -25,10 +25,11 @@ function Template() {
 
   const onClickTodo = useCallback(
     (id) => {
-      todos.forEach((v) => {
-        if (v.id === id) v.checked = !v.checked;
-      });
-      setTodo([...todos]);
+      // todos.forEach((v) => {
+      //   if (v.id === id) v.checked = !v.checked;
+      // });
+      // setTodo([...todos]);
+      setTodo(todos.map((todo) => (todo.id === id ? { ...todo, checked: !todo.checked } : todo)));
     },
     [todos],
   );
