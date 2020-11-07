@@ -30,3 +30,24 @@
 - 리렌더링이 필요하지 않는 함수들은 useCallback()을 사용
 
 - 생각보다 쉽지는 않았다. 책을 많이 참조했다.
+
+## Part.3
+
+- 컴포넌트의 성능 최적화 단계(2~3초 -> 0.1초 이내)
+
+- useState 기본값에 함수를 넣어주면 함수의 리턴값이 기본값이 된다.
+
+  - `useState(createTodo)` => 컴포넌트가 처음 렌더링될 때만 함수 호출
+  - `useState(createTodo())` => 컴포넌트가 리렌더링될 때마다 함수 호출
+
+- 컴포넌트 리렌더링을 방지할 때는 shouldComponentUpdate 라이프사이클 사용
+
+  - 함수형 컴포넌트에서는 React.memo 사용
+
+- useState의 함수형 업데이트
+
+  - setState의 파라미터로 함수를 넣는 방식
+
+- `react-virtualized`
+  - 눈에 안 보이는 약 2490개 정도의 데이터(todos)를 매번 렌더링하기 때문에 비효율적이다.
+  - `react-virtualized`는 눈에 보이는 부분만 렌더링 시켜주는 작업을 한다.
